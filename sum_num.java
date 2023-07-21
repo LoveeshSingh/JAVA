@@ -9,11 +9,11 @@ public class sum_num{
         for(int i=1;i<num;i=i*10){
             len+=1;
         }
-        int sum=0
+        int sum=0;
         for (int j=0;j<len;j+=1){
-            sum=num%10;
-            num=num//10;
+            sum+=num%10;
+            num=num/10;
         }
-        System.out.print("Enter a number: ");
+        System.out.print("sum of the digits of the number is "+sum);
     }
 }
