@@ -13,21 +13,33 @@ public class bin_search{
         System.out.print("Enter the number you want to find: ");
         int fin = scn.nextInt();
 
-        //binary search starts from here
+        //binary search starts from here(use only one of the three things written below)
 
+        int index=-1;
         for (int start=0,end=arr_size-1 ,mid=end/2 ; (start<=end) ; ){
             if (arr[mid]==fin){
-                System.out.print("number found at index "+mid);
+                index=mid;
+                //to find the number
                 break;
+                //to find the numbers first occurence
+                // end=mid-1;
+                //to find the numbers last occurence
+                // start=mid+1;
             }
             else if (arr[mid]>fin){
                 end=mid-1;
-                mid=(start+end)/2;
             }
             else if (arr[mid]<fin){
                 start=mid+1;
-                mid=(start+end)/2;
             }
+            mid=(start+end)/2;
+        }
+
+        if (index==-1){
+            System.out.print("number not found");
+        }
+        else{
+            System.out.print("number found at index "+index);
         }
 
 
