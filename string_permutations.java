@@ -5,9 +5,11 @@ public class string_permutations{
         Scanner scn = new Scanner(System.in);
         System.out.print("Enter the string: ");
         String str = scn.next();
-        for (int i=0 ; i<str.length() ; i++ ){
-            
+
         }
+    }
+
+    public static void permute(String str){
         
     }
 }
