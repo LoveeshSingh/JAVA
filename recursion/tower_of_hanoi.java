@@ -8,13 +8,13 @@ public class tower_of_hanoi{
         tower(ring,"dt","ht","st");
     }
 
-    public static void tower(int ring , String main_tow , String help_tow , String based_tow){
+    public static void tower(int ring , String destination_tow , String help_tow , String source_tow){
         if (ring==1){
-            System.out.println(ring+" || "+based_tow+" --> "+main_tow);
+            System.out.println(ring+" || "+source_tow+" --> "+destination_tow);
             return ;
         }
-        tower(ring-1,help_tow,main_tow,based_tow);
-        System.out.println(ring+" || "+based_tow+" --> "+main_tow);
-        tower(ring-1,main_tow,based_tow,help_tow);
+        tower(ring-1,help_tow,destination_tow,source_tow);
+        System.out.println(ring+" || "+source_tow+" --> "+destination_tow);
+        tower(ring-1,destination_tow,source_tow,help_tow);
     }
 }
