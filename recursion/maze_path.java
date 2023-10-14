@@ -7,7 +7,7 @@ public class maze_path{
         int dr = scan.nextInt();
         System.out.print("Enter the size of array|| column-");
         int dc = scan.nextInt();
-        ArrayList<String> list = gmp(0,0,dr,dc);
+        ArrayList<String> list = gmp(0,0,dr-1,dc-1);
         System.out.print(list);
     }
 
