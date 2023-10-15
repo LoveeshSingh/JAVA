@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class print_all_subsets{
+public class print_all_subarray{
     public static void main(String[] args){
         Scanner scn = new Scanner(System.in);
         ArrayList<Integer> list = new ArrayList<>();
@@ -10,7 +10,7 @@ public class print_all_subsets{
         for (int i=0 ; i<len ; i++){
             list.add(scn.nextInt());
         }
-        System.out.println("All the subsets are: ")
+        System.out.println("All the subarrays are: ");
         for (int j=0 ; j<len ; j++){
             label:
                 for (int sze = list.size() , i=0 ; i<=sze ; i++){
