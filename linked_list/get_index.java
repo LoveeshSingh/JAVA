@@ -1,0 +1,56 @@
+import java.util.*;
+
+public class get_index{
+    static node head = null;
+    static node tail = null;
+
+    static class node{
+        int value;
+        node next;
+        public node(int value){
+            this.value=value;
+            this.next=null;
+        }
+    }
+
+    public static void add_lastll(int value){
+        if (head==null){
+            head = new node(value);
+            tail = head;
+            return;
+        }
+        else{
+            node n = new node(value);
+            tail.next=n;
+            tail=n;
+        }
+    }
+
+    public static int get_indexll(node start,int index){
+        if (start==null){
+            System.out.println("no value in list");
+            return -1;
+        }
+        for (int i = 0 ; i<index ; i++){
+            if (start.next==null){
+                return -1;
+            }
+            start=start.next;
+        }
+        return start.value;
+    }
+
+    public static void main(String[] args){
+        add_lastll(1);
+        add_lastll(2);
+        add_lastll(3);
+        add_lastll(4);
+        add_lastll(5);
+        add_lastll(6);
+        add_lastll(7);
+        add_lastll(8);
+        add_lastll(9);
+        System.out.println(get_indexll(head,6));
+    }
+
+}
